@@ -15,9 +15,9 @@ interface Person {
   age: number;
 }
 
-function printInfo<T extends Person>(data: T): void {
-  console.log(data.name);
-  console.log(data.age);
+function printInfo<T extends Person>(data: T[] | T): void {
+  console.log(data[0].name);
+  console.log(data[0].age);
 }
 
 let ram: Person = {
@@ -25,7 +25,7 @@ let ram: Person = {
   age: 2000,
 };
 
-printInfo(ram);
+printInfo([ram, ram]);
 
 let harshit = {
   name: "Harshit",

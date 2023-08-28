@@ -23,3 +23,22 @@ const saiCafe: Shop = {
   costBy1Hour: 10,
   windows: true,
 };
+
+interface Animal {
+  name: string;
+  makeSound(): void;
+}
+
+interface Flying {
+  fly(): void;
+}
+
+interface Swimming {
+  swim(): void;
+}
+
+// Extending
+interface FlyingAnimal extends Animal, Flying {}
+
+// Intersecting
+type FlyingSwimmingAnimal = Animal & Flying & Swimming;

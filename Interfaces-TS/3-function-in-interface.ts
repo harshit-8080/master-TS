@@ -6,7 +6,7 @@ const printSummary = (item: Summary): void => {
   console.log(item.summary());
 };
 
-const oldCivic = {
+const oldCivic1 = {
   name: "civic",
   year: 2000,
   broken: true,
@@ -24,5 +24,7 @@ const drink = {
   },
 };
 
-printSummary(oldCivic);
+printSummary(oldCivic1);
 printSummary(drink);
+
+

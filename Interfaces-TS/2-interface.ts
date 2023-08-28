@@ -1,8 +1,9 @@
 interface Vehicle {
   name: string;
   year: number;
-  broken: boolean;
-  summary(): string;
+  broken?: boolean;
+  summary(x: number): string;
+  print?(): string;
 }
 
 const oldCivic: Vehicle = {
@@ -14,4 +15,4 @@ const oldCivic: Vehicle = {
   },
 };
 
-console.log(oldCivic.summary());
+console.log(oldCivic.summary(10));
